@@ -1,0 +1,15 @@
+{
+  "name": "redux-only",
+  "version": "1.0.0",
+  "description": "A simple redux with vanilla js without react",
+  "main": "redux-basic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
