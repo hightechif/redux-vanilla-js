@@ -4,7 +4,7 @@
   "description": "A simple redux with vanilla js without react",
   "main": "redux-basic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node redux-basic.js"  
   },
   "keywords": [],
   "author": "",
