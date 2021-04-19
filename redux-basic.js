@@ -7,9 +7,16 @@ const initialState = {
 
 // Reducer
 const rootReducer = (state = initialState, action) => {
+  console.log(`ACTION dipanggil (dispatch [${action.type}])`);
   return state;
 }
 
 // Store
 const store = createStore(rootReducer)
+console.log(store.getState());
+
+// Action (Dispatching Action)
+store.dispatch({
+  type: "INCREMENT_COUNTER"
+})
 console.log(store.getState());
