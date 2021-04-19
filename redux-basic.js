@@ -8,6 +8,7 @@ const initialState = {
 // Reducer
 const rootReducer = (state = initialState, action) => {
   console.log(`ACTION dipanggil (dispatch [${action.type}])`);
+  
   if (action.type === "INCREMENT_COUNTER") {
     const newState = {
       ...state,
@@ -15,6 +16,15 @@ const rootReducer = (state = initialState, action) => {
     }
     return newState
   }
+
+  if (action.type === "ADDING_COUNTER") {
+    const newState = {
+      ...state,
+      counter: state.counter + action.payload.value
+    }
+    return newState
+  }
+
   return state;
 }
 
@@ -28,7 +38,10 @@ store.dispatch({              // Setiap ada dispatch maka reducer pasti dijalank
 })
 
 store.dispatch({
-  type: "ADDING_COUNTER"
+  type: "ADDING_COUNTER",
+  payload: {
+    value: 5
+  }
 })
 
 console.log(store.getState());
